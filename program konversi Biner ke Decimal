@@ -1,0 +1,20 @@
+#include <iostream>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+  int biner,sisa,pangkat;
+  float hasil;
+  cout<<"masukan angka biner nya ;
+  cin>>biner;
+  
+  while(biner>=1){
+    sisa=biner%2;
+    hasil=sisa*pow(2.0,pangkat);
+    biner=biner/10;
+    pangkat++;
+  }
+  cout<<hasil;
+}
