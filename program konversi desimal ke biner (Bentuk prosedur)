@@ -1,7 +1,0 @@
-static void desimalkebiner(int angka) {
-        if (angka >= 1) {
-            desimalkebiner(angka / 2);
-        }
-            System.out.print(+angka % 2);
-    }
-   

@@ -1,0 +1,37 @@
+static void desimalkebiner(int angka) {
+        if (angka >= 1) {
+            desimalkebiner(angka / 2);
+        }
+            System.out.print(+angka % 2);
+    }
+    static void desimalkeoktal(int des){
+        if(des>=8){
+            desimalkeoktal(des/8);
+        }
+        System.out.print(+des%8);
+    }
+    static void desimalkehexa(int desimal) {
+        if (desimal >= 16) {
+            desimalkehexa(desimal / 16);
+        }
+        switch (desimal % 16) {
+            case 10:
+                System.out.print("A");
+                break;
+            case 11:
+                System.out.print("B");
+                break;
+            case 12:
+                System.out.print("C");
+                break;
+            case 13:
+                System.out.print("D");
+                break;
+            case 14:
+                System.out.print("E");
+                break;
+            default:
+                System.out.print(desimal % 16);
+                break;
+        }
+    }
