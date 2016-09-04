@@ -1,0 +1,44 @@
+import java.util.Scanner;
+
+public class program {
+    static Scanner input = new Scanner(System.in);
+    static int[] arr_bil= new int[1000];
+    static String[] set= new String[1000];
+
+        double hasil=0;
+        double result=0;
+        int a=0;
+        char t;
+        String bil;
+        System.out.print("Masukan angka binernya = ");
+        bil = input.nextLine();
+        
+        for(int i=0;i<bil.length();i++){
+            t=bil.charAt(i);
+            set[i]=Character.toString(t);
+        }
+        int [] asdw = new int [1000];
+        int j=0;
+        for(int i=bil.length()-1;i>=0;i--) {
+            arr_bil[a] = Integer.parseInt(set[i]);
+            hasil = arr_bil[a] * (Math.pow(2, a));
+            result = result + hasil;
+            a++;
+            if (a == 3) {
+                int result2 = (int)result;
+                asdw[j] = result2;
+                j++;
+                a = 0;
+                result = 0;
+            }
+        }
+        int result2 = (int)result;
+        if(result2!=0) {
+            System.out.print("Hexadesimalnya adalah = " + result2);
+        }
+        for(int i=j-1;i>=0;i--){
+            System.out.print(+asdw[i]);
+        }
+        System.out.println("");
+
+    }
